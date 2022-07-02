@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Edit profile"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEditName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-84dp"
+        android:text="Name"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/etEditName"
+        app:layout_constraintStart_toStartOf="@+id/etEditName"
+        app:layout_constraintTop_toTopOf="@+id/etEditName" />
+
+    <TextView
+        android:id="@+id/tvEditLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last name"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/etEditLastName"
+        app:layout_constraintStart_toStartOf="@+id/tvEditName"
+        app:layout_constraintTop_toTopOf="@+id/etEditLastName" />
+
+    <TextView
+        android:id="@+id/tvEditUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/etEditUserName"
+        app:layout_constraintStart_toStartOf="@+id/tvEditLastName"
+        app:layout_constraintTop_toTopOf="@+id/etEditUserName" />
+
+    <TextView
+        android:id="@+id/tvEditAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Age"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/tvEditUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditUserName" />
+
+    <EditText
+        android:id="@+id/etEditName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tvEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
+
+    <EditText
+        android:id="@+id/etEditLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etEditName"
+        app:layout_constraintStart_toStartOf="@+id/etEditName"
+        app:layout_constraintTop_toBottomOf="@+id/etEditName" />
+
+    <EditText
+        android:id="@+id/etEditUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etEditLastName"
+        app:layout_constraintStart_toStartOf="@+id/etEditLastName"
+        app:layout_constraintTop_toBottomOf="@+id/etEditLastName" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bt_bg"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
+        app:layout_constraintStart_toStartOf="@+id/etEditUserName"
+        app:layout_constraintTop_toBottomOf="@+id/etEditUserName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
