@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/flAvatar"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/wiz_khalifa_5" />
+
+        <ImageView
+            android:id="@+id/ivStoriesCircle"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/instagram_stories_ring_550x550" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivCheckMark"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tvUserName"
+        app:layout_constraintTop_toTopOf="@+id/tvUserName"
+        app:srcCompat="@drawable/check_mark" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@wizkhalifa"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/flAvatar"
+        app:layout_constraintTop_toTopOf="@+id/flAvatar" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Wiz Khalifa"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Los Angeles, United States"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <ImageView
+        android:id="@+id/ivPhoto1"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivPhoto2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flAvatar"
+        app:srcCompat="@drawable/wiz_khalifa_1" />
+
+    <ImageView
+        android:id="@+id/ivPhoto2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flAvatar"
+        app:srcCompat="@drawable/wiz_khalifa_2" />
+
+    <ImageView
+        android:id="@+id/ivPhoto3"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPhoto2"
+        app:layout_constraintTop_toBottomOf="@+id/flAvatar"
+        app:srcCompat="@drawable/wiz_khalifa_3" />
+
+    <TextView
+        android:id="@+id/tvMyInterests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="My interests"
+        android:textColor="#323232"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto1" />
+
+    <ImageView
+        android:id="@+id/ivInterest4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivInterest5"
+        app:layout_constraintStart_toEndOf="@+id/ivInterest3"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyInterests"
+        app:srcCompat="@drawable/interests_4"
+        tools:srcCompat="@drawable/interests_4" />
+
+    <ImageView
+        android:id="@+id/ivInterest5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivInterest4"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyInterests"
+        app:srcCompat="@drawable/interests_5" />
+
+    <ImageView
+        android:id="@+id/ivInterest3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivInterest4"
+        app:layout_constraintStart_toEndOf="@+id/ivInterest2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyInterests"
+        app:srcCompat="@drawable/interests_3"
+        tools:srcCompat="@drawable/interests_3" />
+
+    <ImageView
+        android:id="@+id/ivInterest1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivInterest2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyInterests"
+        app:srcCompat="@drawable/interests_1" />
+
+    <ImageView
+        android:id="@+id/ivInterest2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivInterest3"
+        app:layout_constraintStart_toEndOf="@+id/ivInterest1"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyInterests"
+        app:srcCompat="@drawable/interests_2" />
+
+    <TextView
+        android:id="@+id/tvInterest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Composing"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivInterest1"
+        app:layout_constraintStart_toStartOf="@+id/ivInterest1"
+        app:layout_constraintTop_toBottomOf="@+id/ivInterest1" />
+
+    <TextView
+        android:id="@+id/tvInterest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Directing"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivInterest2"
+        app:layout_constraintStart_toStartOf="@+id/ivInterest2"
+        app:layout_constraintTop_toBottomOf="@+id/ivInterest2" />
+
+    <TextView
+        android:id="@+id/tvInterest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Singing"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivInterest3"
+        app:layout_constraintStart_toStartOf="@+id/ivInterest3"
+        app:layout_constraintTop_toBottomOf="@+id/ivInterest3" />
+
+    <TextView
+        android:id="@+id/tvInterest4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fintess"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivInterest4"
+        app:layout_constraintStart_toStartOf="@+id/ivInterest4"
+        app:layout_constraintTop_toBottomOf="@+id/ivInterest4" />
+
+    <TextView
+        android:id="@+id/tvInterest5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bikes"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivInterest5"
+        app:layout_constraintStart_toStartOf="@+id/ivInterest5"
+        app:layout_constraintTop_toBottomOf="@+id/ivInterest5" />
+
+    <TextView
+        android:id="@+id/tvFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Friends: 8000"
+        android:textColor="#323232"
+        app:layout_constraintStart_toStartOf="@+id/tvInterest1"
+        app:layout_constraintTop_toBottomOf="@+id/tvInterest1" />
+
+    <TextView
+        android:id="@+id/tvBestFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Best friends"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFriends" />
+
+    <ImageView
+        android:id="@+id/ivBestFriends5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBestFriends4"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestFriends"
+        app:srcCompat="@drawable/friends_5" />
+
+    <ImageView
+        android:id="@+id/ivBestFriends1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivBestFriends2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestFriends"
+        app:srcCompat="@drawable/friends_1" />
+
+    <ImageView
+        android:id="@+id/ivBestFriends4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivBestFriends5"
+        app:layout_constraintStart_toEndOf="@+id/ivBestFriends3"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestFriends"
+        app:srcCompat="@drawable/friends_4" />
+
+    <ImageView
+        android:id="@+id/ivBestFriends2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivBestFriends3"
+        app:layout_constraintStart_toEndOf="@+id/ivBestFriends1"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestFriends"
+        app:srcCompat="@drawable/friends_2" />
+
+    <ImageView
+        android:id="@+id/ivBestFriends3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivBestFriends4"
+        app:layout_constraintStart_toEndOf="@+id/ivBestFriends2"
+        app:layout_constraintTop_toBottomOf="@+id/tvBestFriends"
+        app:srcCompat="@drawable/friends_3" />
+
+    <Button
+        android:id="@+id/btSettings"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bt_bg"
+        android:text="Settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMenu"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btMenu"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bt_bg"
+        android:text="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btSearch"
+        app:layout_constraintStart_toEndOf="@+id/btSettings" />
+
+    <Button
+        android:id="@+id/btSearch"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bt_bg"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btMenu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
