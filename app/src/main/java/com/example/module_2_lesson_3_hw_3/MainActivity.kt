@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         val correctLogin = "vdcast"
         val correctPassword = "1234"
 
+        clProfilePage.visibility = View.GONE
+
         btLogin.setOnClickListener {
             if (etLogin.text.toString() == correctLogin){
                 if (etPassword.text.toString() == correctPassword){

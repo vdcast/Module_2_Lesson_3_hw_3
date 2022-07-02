@@ -97,7 +97,7 @@
         android:id="@+id/clProfilePage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
+        android:visibility="visible"
         tools:layout_editor_absoluteY="431dp">
 
         <FrameLayout
