@@ -1,9 +1,11 @@
 package com.example.module_2_lesson_3_hw_3
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,21 +39,38 @@ class MainActivity : AppCompatActivity() {
 
         btEditProfile.setOnClickListener {
             val intent = Intent(this,EditProfileActivity::class.java)
-            startActivityForResult(intent,1)
-
+            resultLauncher.launch(intent)
         }
 
-        val keks = "keks"
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 1){
+    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK){
+            val data: Intent? = result.data
             tvName.text = data?.getStringExtra(Enums.NAME)
             tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
             tvUserName.text = data?.getStringExtra(Enums.USERNAME)
         }
+
+
     }
+
+
+    // old method
+//    btEditProfile.setOnClickListener {
+//        val intent = Intent(this,EditProfileActivity::class.java)
+//        startActivityForResult(intent,1)
+//
+//    }
+
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (requestCode == 1){
+//            tvName.text = data?.getStringExtra(Enums.NAME)
+//            tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
+//            tvUserName.text = data?.getStringExtra(Enums.USERNAME)
+//        }
+//    }
 
 }
