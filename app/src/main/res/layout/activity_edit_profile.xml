@@ -53,11 +53,11 @@
         android:id="@+id/tvEditAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="Age"
         android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/spAge"
         app:layout_constraintStart_toStartOf="@+id/tvEditUserName"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditUserName" />
+        app:layout_constraintTop_toTopOf="@+id/spAge" />
 
     <EditText
         android:id="@+id/etEditName"
@@ -99,19 +99,20 @@
         android:id="@+id/btSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bt_bg"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
         app:layout_constraintStart_toStartOf="@+id/etEditUserName"
-        app:layout_constraintTop_toBottomOf="@+id/etEditUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/spAge" />
 
     <Spinner
         android:id="@+id/spAge"
-        android:layout_width="409dp"
+        android:layout_width="108dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
+        app:layout_constraintStart_toStartOf="@+id/etEditUserName"
+        app:layout_constraintTop_toBottomOf="@+id/etEditUserName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

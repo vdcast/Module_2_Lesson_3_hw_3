@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             if (data?.getStringExtra(Enums.NAME) == "") else tvName.text = data?.getStringExtra(Enums.NAME)
             if (data?.getStringExtra(Enums.LASTNAME) == "") else tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
             if (data?.getStringExtra(Enums.USERNAME) == "@") else tvUserName.text = data?.getStringExtra(Enums.USERNAME)
-
+            if (data?.getStringExtra(Enums.AGE) == "") else tvAge.text = data?.getStringExtra(Enums.AGE) + " y.o."
         }
     }
 
