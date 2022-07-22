@@ -12,16 +12,24 @@ class EditProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edit_profile)
 
         btSave.setOnClickListener {
-            val name = etEditName.text.toString()
-            val lastName = etEditLastName.text.toString()
-            val userName = etEditUserName.text.toString()
             val resultIntent = Intent(this, MainActivity::class.java)
-            resultIntent.putExtra(Enums.NAME,name)
-            resultIntent.putExtra(Enums.LASTNAME,lastName)
-            resultIntent.putExtra(Enums.USERNAME,userName)
+            if (etEditName.text.toString() !== ""){
+                val name = etEditName.text.toString()
+                resultIntent.putExtra(Enums.NAME,name)
+            }
+            if (etEditLastName.text.toString() !== ""){
+                val lastName = etEditLastName.text.toString()
+                resultIntent.putExtra(Enums.LASTNAME,lastName)
+            }
+            if (etEditUserName.text.toString() !== ""){
+                val userName = "@" + etEditUserName.text.toString()
+                resultIntent.putExtra(Enums.USERNAME,userName)
+            }
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         }
+
+
 
     }
 }

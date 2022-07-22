@@ -68,7 +68,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/tvEditProfile"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etEditLastName"
@@ -79,7 +80,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/etEditName"
         app:layout_constraintStart_toStartOf="@+id/etEditName"
-        app:layout_constraintTop_toBottomOf="@+id/etEditName" />
+        app:layout_constraintTop_toBottomOf="@+id/etEditName"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/etEditUserName"
@@ -90,7 +92,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/etEditLastName"
         app:layout_constraintStart_toStartOf="@+id/etEditLastName"
-        app:layout_constraintTop_toBottomOf="@+id/etEditLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/etEditLastName"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btSave"
@@ -102,4 +105,13 @@
         app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
         app:layout_constraintStart_toStartOf="@+id/etEditUserName"
         app:layout_constraintTop_toBottomOf="@+id/etEditUserName" />
+
+    <Spinner
+        android:id="@+id/spAge"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

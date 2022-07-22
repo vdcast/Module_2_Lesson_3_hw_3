@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.activity_main.*
@@ -42,18 +43,16 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
 
-
     }
 
-    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+    private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK){
             val data: Intent? = result.data
-            tvName.text = data?.getStringExtra(Enums.NAME)
-            tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
-            tvUserName.text = data?.getStringExtra(Enums.USERNAME)
+            if (data?.getStringExtra(Enums.NAME) == "") else tvName.text = data?.getStringExtra(Enums.NAME)
+            if (data?.getStringExtra(Enums.LASTNAME) == "") else tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
+            if (data?.getStringExtra(Enums.USERNAME) == "@") else tvUserName.text = data?.getStringExtra(Enums.USERNAME)
+
         }
-
-
     }
 
 

@@ -4,4 +4,5 @@ object Enums {
     const val NAME = "name"
     const val LASTNAME = "last_name"
     const val USERNAME = "username"
+    const val AGE = "age"
 }
