@@ -99,12 +99,12 @@
         android:id="@+id/btSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bt_bg"
         android:text="Save"
-        app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
-        app:layout_constraintStart_toStartOf="@+id/etEditUserName"
-        app:layout_constraintTop_toBottomOf="@+id/spAge" />
+        app:layout_constraintEnd_toEndOf="@+id/btChangePhoto"
+        app:layout_constraintStart_toStartOf="@+id/btChangePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/btChangePhoto" />
 
     <Spinner
         android:id="@+id/spAge"
@@ -114,5 +114,16 @@
         app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
         app:layout_constraintStart_toStartOf="@+id/etEditUserName"
         app:layout_constraintTop_toBottomOf="@+id/etEditUserName" />
+
+    <Button
+        android:id="@+id/btChangePhoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bt_bg"
+        android:text="Change Photo"
+        app:layout_constraintEnd_toEndOf="@+id/etEditUserName"
+        app:layout_constraintStart_toStartOf="@+id/etEditUserName"
+        app:layout_constraintTop_toBottomOf="@+id/spAge" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,15 @@ package com.example.module_2_lesson_3_hw_3
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.ArrayAdapter
-import android.widget.Spinner
+import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.activity_edit_profile.*
+import kotlinx.android.synthetic.main.activity_main.*
+import java.io.InputStream
 
 class EditProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +46,23 @@ class EditProfileActivity : AppCompatActivity() {
             finish()
         }
 
-
+        btChangePhoto.setOnClickListener {
+            val pickImageIntent = Intent (Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+//            pickImageIntent.type = "image/*"
+//            val mimeTypes = arrayOf("image/jpeg","image/png")
+//            pickImageIntent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes)
+//            resultLauncher.launch(pickImageIntent)
+        }
 
     }
+
+//    private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//        if (result.resultCode == Activity.RESULT_OK){
+//            val data: Intent? = result.data
+//            val selectedImageUri: Uri? = data?.data
+//            ivAvatar.setImageURI(selectedImageUri)
+//        }
+//    }
+
 }
+
