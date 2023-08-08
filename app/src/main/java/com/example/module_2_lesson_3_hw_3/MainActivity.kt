@@ -2,11 +2,14 @@ package com.example.module_2_lesson_3_hw_3
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +46,11 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(intent)
         }
 
+        btEditPhoto.setOnClickListener {
+            val pickImageIntent = Intent (Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+            resultLauncher2.launch(pickImageIntent)
+        }
+
     }
 
     private var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -52,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             if (data?.getStringExtra(Enums.LASTNAME) == "") else tvLastName.text = data?.getStringExtra(Enums.LASTNAME)
             if (data?.getStringExtra(Enums.USERNAME) == "@") else tvUserName.text = data?.getStringExtra(Enums.USERNAME)
             if (data?.getStringExtra(Enums.AGE) == "") else tvAge.text = data?.getStringExtra(Enums.AGE) + " y.o."
+
         }
     }
 
@@ -71,5 +80,16 @@ class MainActivity : AppCompatActivity() {
 //            tvUserName.text = data?.getStringExtra(Enums.USERNAME)
 //        }
 //    }
+
+
+// button change photo launcher
+    private var resultLauncher2 = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK){
+            val data: Intent? = result.data
+            val selectedImageUri: Uri? = data?.data
+            ivAvatar.setImageURI(selectedImageUri)
+        }
+    }
+
 
 }
