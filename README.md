@@ -3,7 +3,7 @@
 
 UI logic. Activity.
 
-**Technical task:**
+**Task:**
 
 As a basis, take the application with a personal page of social network from previous lesson.
 1. Add an activity where you can change your first name, last name. Also age (select from the drop-down list). And return it to the main activity.
